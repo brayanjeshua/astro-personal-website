@@ -2,12 +2,12 @@
 import { Icon } from "astro-icon";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
+import bjLogo from "~/assets/logoBJ.png";
+import { Picture } from "@astrojs/image/components";
 
-const navItems: Array<NavItem> = [
-  { title: "Features", url: "#features" },
-  { title: "Compatibility", url: "#compatibility" },
-  { title: "Showcase", url: "#showcase" },
-];
+const widths = [450, 800];
+const sizes = "(min-width: 640px) 42vw, 67vw";
+const navItems: Array<NavItem> = [{ title: "About me", url: "#about-me" }];
 ---
 
 <header
@@ -16,9 +16,18 @@ const navItems: Array<NavItem> = [
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
     <h1 class="sr-only">Software Development and Solutions</h1>
-    <Icon name="logomark" class="h-10" />
-    <Icon name="wordmark" class="hidden h-4 sm:block" />
-  </a>
+    <div class="flex">
+      <Picture
+        class="h-10"
+        src={bjLogo}
+        widths={widths}
+        sizes={sizes}
+        loading="eager"
+        alt="A floating astronaut in a space suit"
+      />
+      <h4 class="hidden h-4 sm:block ml-2">brayanjeshua.com</h4>
+    </div>
+    </a>
   <div>
     <div class="flex items-center gap-6">
       <nav class="hidden sm:block">
@@ -58,7 +67,14 @@ const navItems: Array<NavItem> = [
             </button>
           </header>
           <div class="flex justify-center">
-            <Icon name="logomark" class="h-16" />
+            <Picture
+              class="h-10"
+              src={bjLogo}
+              widths={widths}
+              sizes={sizes}
+              loading="eager"
+              alt="A floating astronaut in a space suit"
+            />
           </div>
           <nav>
             <ul class="flex flex-col">

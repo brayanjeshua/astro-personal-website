@@ -1,16 +1,36 @@
 ---
 import { Icon } from "astro-icon";
+import bjLogo from "~/assets/logoBJ.png";
 import ContentSection from "~/components/content-section.astro";
+import { Picture } from "@astrojs/image/components";
 ---
 
-<ContentSection title="Software and Technical Advice on demand" id="intro">
-  <Icon slot="eyebrow" name="logomark" class="h-32" />
+<ContentSection title="Software and Technical Advice on demand" id="about-me">
+  <Picture
+    class="h-10"
+    src={bjLogo}
+    widths={[450, 800]}
+    sizes="(min-width: 640px) 42vw, 67vw"
+    loading="eager"
+    alt="A floating astronaut in a space suit"
+  />
+
   <Fragment slot="lead">
     Brayan Jeshua is a entusiast
-    <span class="text-primary">Software Creator</span> and eternal learner.
-    <span class="text-primary">Skilled</span>
-    in identifying <span class="text-primary">company needs</span> and proposing effective solutions for process improvement.
+    <span class="text-primary">Software Creator</span> and Startup Advisor
   </Fragment>
+
+
+  <div class="grid grid-cols-1 gap-2 px-6">
+    <p class="text-md">
+      Skilled in identifying company needs and proposing effective solutions for
+      process improvement. Passionate about providing rapid solutions and
+      enhancing user experience. Proven ability to work effectively in remote
+      and hybrid team environments. I like it when everything is straightforward
+      and easy to understand, so that no issues arise.
+    </p>
+  </div>
+
   <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
     <a
       href="tel:+393512979728"
