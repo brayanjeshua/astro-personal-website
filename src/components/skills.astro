@@ -1,0 +1,50 @@
+---
+import CompatibilityList from "~/components/compatibility-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { CompatibilityItem } from "~/types";
+
+const frameworks: Array<CompatibilityItem> = [
+  {
+    title: "React",
+    icon: "frameworks/react",
+    url: "https://reactjs.org/",
+  },
+  {
+    title: "Lit",
+    icon: "frameworks/lit",
+    url: "https://lit.dev/",
+  },
+  {
+    title: "Netlify",
+    icon: "platforms/netlify",
+    url: "https://www.netlify.com/",
+  },
+  {
+    title: "Cloudflare",
+    icon: "fa-brands:cloudflare",
+    url: "https://pages.cloudflare.com/",
+  },
+  {
+    title: "GitHub",
+    icon: "fa-brands:github",
+    url: "https://pages.github.com/",
+  },
+  {
+    title: "GitLab",
+    icon: "fa-brands:gitlab",
+    url: "https://docs.gitlab.com/ee/user/project/pages/",
+  },
+];
+
+---
+
+<ContentSection title="My Skills" id="skills">
+  <Fragment slot="lead">
+    Here you can find a list of my skills and the tools I use.
+  </Fragment>
+  <CompatibilityList
+    items={frameworks}
+    title="My Favorite Stack"
+    url="https://brayanjeshua.com/#contact"
+  />
+</ContentSection>

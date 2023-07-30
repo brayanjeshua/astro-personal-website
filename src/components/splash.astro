@@ -1,6 +1,6 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import astronautImage from "~/assets/astronaut.png";
+import satelliteImage from "~/assets/satellite.png";
 import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
 import bjLogo from "~/assets/logoBJ-top-rosey.png";
@@ -24,7 +24,7 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
         widths={widths}
         sizes={sizes}
         loading="eager"
-        alt="A floating astronaut in a space suit"
+        alt="A floating satellite in a space suit"
       />
       <div
         class="gradient-text text-center font-extrabold tracking-tighter text-8xl"
@@ -35,16 +35,16 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
       </div>
     </h2>
     <div
-      id="astronaut"
+      id="satellite"
       class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
     >
       <Picture
         class="h-full w-full object-cover"
-        src={astronautImage}
+        src={satelliteImage}
         widths={widths}
         sizes={sizes}
         loading="eager"
-        alt="A floating astronaut in a space suit"
+        alt="A floating satellite in a space suit"
       />
     </div>
   </div>
@@ -69,12 +69,12 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
     }
   }
 
-  #astronaut {
+  #satellite {
     animation: float linear 2.5s infinite alternate;
   }
 
   @media (prefers-reduced-motion: reduce) {
-    #astronaut {
+    #satellite {
       @apply animate-none;
     }
 
